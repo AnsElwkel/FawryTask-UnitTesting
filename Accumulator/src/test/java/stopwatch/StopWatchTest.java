@@ -31,4 +31,12 @@ public class StopWatchTest {
         Assertions.assertEquals(0, minutes);
     }
 
+    //Passing Test => Increase day ,, since the requirements are to count minutes only
+    //So this test already handling by previous cycle
+    @Test public void test4(){
+        stopWatch.record(StopWatch.DAILY_WORKING_HOURS * 60 + 2);
+        int minutes = stopWatch.getMinutes();
+        Assertions.assertEquals(2, minutes);
+    }
+
 }
