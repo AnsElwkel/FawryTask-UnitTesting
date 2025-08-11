@@ -24,11 +24,11 @@ public class StopWatchTest {
         Assertions.assertEquals(0, minutes);
     }
 
-    //Failing Test => Hours should increase
+    ///Passing Test => Increase hours when minutes >= 60 == minutes must be < 60
     @Test public void test3(){
         stopWatch.record(60);
         int minutes = stopWatch.getMinutes();
-        Assertions.assertEquals(0 , minutes);
+        Assertions.assertEquals(0, minutes);
     }
 
 }
