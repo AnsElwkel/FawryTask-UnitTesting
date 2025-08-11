@@ -17,7 +17,7 @@ public class StopWatchTest {
         Assertions.assertEquals(14, minutes);
     }
 
-    //Failing Test Case -> doesn't ignore negative values
+    //Passing Test Case
     @Test public void test2(){
         stopWatch.record(-5);
         int minutes = stopWatch.getMinutes();
