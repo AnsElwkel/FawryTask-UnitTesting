@@ -10,18 +10,25 @@ public class StopWatchTest {
         stopWatch = new StopWatch();
     }
 
-    //Passing Test Case
+    ///Passing Test => Record minutes
     @Test public void test1(){
         stopWatch.record(14);
         int minutes = stopWatch.getMinutes();
         Assertions.assertEquals(14, minutes);
     }
 
-    //Passing Test Case
+    ///Passing Test => Ignore negative minutes
     @Test public void test2(){
         stopWatch.record(-5);
         int minutes = stopWatch.getMinutes();
         Assertions.assertEquals(0, minutes);
+    }
+
+    //Failing Test => Hours should be 1
+    @Test public void test3(){
+        stopWatch.record(60);
+        int hrs = stopWatch.getHours();
+        Assertions.assertEquals(1, hrs);
     }
 
 }
