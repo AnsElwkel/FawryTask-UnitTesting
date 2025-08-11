@@ -6,7 +6,7 @@ public class Accumulator {
     int sum = 0;
 
     public int add(int x) {
-        sum = (sum + x); //Incorrect Logic
+        sum = (sum + x) % LIMIT; /// Correct Logic
         return sum;
     }
 
